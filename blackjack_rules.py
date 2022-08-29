@@ -46,54 +46,22 @@ class Blackjack:
         print("Dealing first card.")
         for player in self.players:
             top_card = self.deck.remove_card_by_index(0)
-            print("Dealing a", top_card, "to", player)
+            print("Dealt a", top_card, "to", player.name)
             player.faceup.append_card(top_card)
-            #player.faceup.append_card(self.deck.remove_card_by_index(0))
-            player.say_faceup_cards()
 
         top_card = self.deck.remove_card_by_index(0)
+        print("Dealt a", top_card, "to the dealer")
         self.dealer.faceup.append_card(top_card)
-
-        print("dealing 10 random cards")
-        for i in range(10):
-            print(self.deck.remove_card_by_index(0))
-
-        print("printing deck remaining")
-        print(self.deck.cards)
 
         print("Dealing second card.")
         for player in self.players:
             player.faceup.append_card(self.deck.remove_card_by_index(0))
-            print(self.players)
-            print("haha")
-            player.say_faceup_cards()
-        print("what")
+            print("Dealt a", top_card, "to", player.name)
         top_card = self.deck.remove_card_by_index(0)
-        self.dealer.faceup.append_card(top_card)
+        print("Dealt a face-down card to the dealer.")
+        self.dealer.facedown.append_card(top_card)
 
 
 #        self.dealer.facedown.append_card(self.deck.remove_card_by_index(0))
-
-        for player in self.players:
-            player.say_faceup_cards()
-        self.dealer.say_faceup_cards()
-        print("hi")
-        print(self.dealer.faceup)
-        print(self.players[0].faceup)
-        self.dealer.faceup.remove_card_by_index(0)
-        self.players[0].say_faceup_cards()
-        self.dealer.say_faceup_cards()
-
-        self.wowowow = playerpy.Player("wooooooooo")
-        self.wowowow.say_faceup_cards()
-        self.wowowow.strange.append(10)
-        print(self.wowowow.strange)
-        print(self.dealer.strange)
-
-
-        print("LETS GO!")
-
-
-
 
                 #
