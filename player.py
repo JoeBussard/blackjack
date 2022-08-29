@@ -4,7 +4,6 @@ class Player:
     def __init__(self, name):
         self.name = name
         self.faceup = hand.Hand([])
-        self.strange = [1]
         self.facedown = hand.Hand([])
 
     def say_faceup_cards(self):

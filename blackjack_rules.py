@@ -62,6 +62,4 @@ class Blackjack:
         self.dealer.facedown.append_card(top_card)
 
 
-#        self.dealer.facedown.append_card(self.deck.remove_card_by_index(0))
-
                 #
